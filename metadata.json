@@ -1,0 +1,8 @@
+{
+  "name": "Logística360",
+  "description": "Painel Operacional para controle logístico de frotas de granel e cilindros",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
