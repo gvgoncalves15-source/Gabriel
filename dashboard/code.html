@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "surface-dim": "#cbdbf5", "tertiary-container": "#434b60", "on-secondary-container": "#fefcff", "tertiary-fixed": "#dae2fd", "primary-container": "#1e40af", "on-error-container": "#93000a", "primary-fixed": "#dde1ff", "surface-container": "#e5eeff", "primary": "#00288e", "primary-fixed-dim": "#b8c4ff", "on-tertiary-fixed": "#131b2e", "inverse-primary": "#b8c4ff", "outline-variant": "#c4c5d5", "on-background": "#0b1c30", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "surface-container-low": "#eff4ff", "surface-tint": "#3755c3", "tertiary": "#2d3449", "surface-container-high": "#dce9ff", "outline": "#757684", "surface-container-highest": "#d3e4fe", "secondary-fixed-dim": "#b4c5ff", "secondary": "#0051d5", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#3f465c", "on-tertiary-container": "#b4bbd5", "on-error": "#ffffff", "background": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "secondary-container": "#316bf3", "inverse-surface": "#213145", "on-secondary-fixed": "#00174b", "tertiary-fixed-dim": "#bec6e0", "surface-bright": "#f8f9ff", "on-primary-container": "#a8b8ff", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#173bab", "on-primary-fixed": "#001453", "error": "#ba1a1a", "on-surface-variant": "#444653", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#003ea8", "on-surface": "#0b1c30", "secondary-fixed": "#dbe1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "space-2xl": "2rem", "space-lg": "1rem", "space-xxs": "0.125rem", "space-md": "0.75rem", "space-sm": "0.5rem", "dock-height": "4rem", "sidebar-width": "16rem", "space-xs": "0.25rem", "sidebar-collapsed": "4.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg-mobile": [ "Inter" ], "headline-md": [ "Inter" ], "body-sm": [ "Inter" ], "title-md": [ "Inter" ], "label-lg": [ "Inter" ], "label-md": [ "Inter" ], "title-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg": [ "Inter" ] }, "fontSize": { "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "title-md": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "label-lg": [ "13px", { "lineHeight": "18px", "fontWeight": "600" } ], "label-md": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "title-lg": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "headline-lg": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Logística360 Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WMwnZQECNm94Ba_OLCBzWtVH5bFIKYFd5hNeEvPFNUF7AQQ_vWQqOaGbFl4pma6KN9XRJyr3iTsPiH8u1q6a285sDjbEY4aTks5C1ag_vOizSFENj6J24STPWwbHIl3v5JjbPh_CojjL9IoVi2t3R9ETjWek7KJi4bCk2Z00WRubgKqraWDMqzbtWFHCl4A-ns8lK12goU7vqqeJvX3YAkv3ctFZGG3W6iBxE9oPnp3niBHrgfJy4K4jw"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary leading-tight tracking-tight">Logística360</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Granel &amp; Cilindros</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-md text-label-md text-outline uppercase tracking-wider">Operação Diária</div></div><nav class="px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-title-md rounded-lg shadow-sm" data-path="painel" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Painel</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="clientes" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span>Clientes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="escalas" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Escalas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="equipe" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Equipe</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ocorrencias" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">report_problem</span><span>Ocorrências</span></div><span class="px-space-xs py-space-xxs rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">3</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]"><div class="flex items-center justify-between"><span class="font-label-lg text-label-lg text-on-surface">Central de Apoio</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Suporte técnico de despacho e monitoramento via rádio/telemetria.</p><div class="flex items-center justify-between pt-space-xs"><span class="font-label-sm text-label-sm text-outline">v3.1 Ativa</span><span class="font-label-sm text-label-sm text-secondary font-semibold">Online</span></div></div><div class="px-space-sm py-space-xxs flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm text-outline">Status do Sistema</span><div class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Sincronizado</span></div></div></div></aside><div class="pl-sidebar-width"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 px-space-xl flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg flex-1"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" placeholder="Buscar cliente, motorista, placa, rota..." type="text"/></div><div class="hidden xl:flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-outline">event</span><span>Hoje: Terça-feira, 24 de Outubro</span></div><span class="text-outline-variant">•</span><div class="flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-secondary"></span><span class="font-label-lg text-label-lg text-primary">23 equipes ativas</span></div></div></div><div class="flex items-center gap-space-lg"><button class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-md"><div class="text-right hidden sm:flex sm:flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">Carlos Eduardo Mendes</span><span class="font-label-sm text-label-sm text-on-surface-variant">Supervisor de Operações</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2nHvnEffuy-6IRPCFoxlLcbb-jvVbdYPBOVEdEnAMZ0EzqBiP2xNUm3QNLok4kB3NK0AD40-fZbBN8rMecp-Xgt2RGfHzmfQcrJpd7NcHz13EIiXEbAnFHfagq1FObJKQkrA_GBPhTqc2sdvn26KhngvLewVZBrjqLymUjDNlF-ZDFMn7FEZb-NfH5z7W95v0_C1mdvNCd8SzENq7NhHwo5l8c-Zq7tzHfjm1E34L8jtoiAiOXqIGTg"/></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-xl py-space-xl"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Command & Action Strip -->
+<section class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-fixed-dim/20 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs relative z-10">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-xxs rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+          Turno Matutino • 06:00 às 15:48
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sincronização telemétrica: agora mesmo</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Visão Geral Operacional</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Monitoramento em tempo real de clientes, escalas e ocorrências ativas.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm relative z-10">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">print</span>
+<span>Imprimir Escala do Dia</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low text-primary font-title-md text-title-md hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar Relatório Diário</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-title-md text-title-md hover:bg-secondary transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_alert</span>
+<span>Nova Ocorrência</span>
+</button>
+</div>
+</section>
+<!-- KPI Pulse Strip (6 Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-6 gap-space-md">
+<!-- Card 1: Clientes Granel -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Clientes Granel</span>
+<div class="h-8 w-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xxs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">2.015</span>
+<span class="px-space-xs py-space-xxs rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Malha Ativa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Ativos na malha de distribuição</p>
+</div>
+</div>
+<!-- Card 2: Clientes Cilindro -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Clientes Cilindro</span>
+<div class="h-8 w-8 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">propane_tank</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xxs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">59</span>
+<span class="px-space-xs py-space-xxs rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Contínuo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Contratos contínuos ativos</p>
+</div>
+</div>
+<!-- Card 3: Motoristas Escalados Hoje -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Escalados Hoje</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">steering_wheel_heat</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xxs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">23</span>
+<span class="font-title-md text-title-md text-on-surface-variant">equipes</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-xxs">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">100% em trânsito</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Faltas Hoje -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Faltas Hoje</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xxs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none">0</span>
+<span class="px-space-xs py-space-xxs rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Integral</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Nenhuma ausência reportada</p>
+</div>
+</div>
+<!-- Card 5: Folgas Hoje -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Folgas Hoje</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xxs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none">4</span>
+<span class="px-space-xs py-space-xxs rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Escala</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2 motoristas • 2 ajudantes</p>
+</div>
+</div>
+<!-- Card 6: Ocorrências em Aberto -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-error">Ocorrências</span>
+<div class="h-8 w-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xxs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-error leading-none">3</span>
+<span class="px-space-xs py-space-xxs rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Atenção</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2 em curso • 1 pendente</p>
+</div>
+</div>
+</section>
+<!-- Main Split Canvas: 65% Primary Dispatch / 35% Fleet Operations -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Coluna Principal (65% -> 8 colunas no lg) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl min-w-0">
+<!-- Gráfico de Distribuição Regional: Top 10 Cidades -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">location_city</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Clientes por Cidade</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top 10 cidades atendidas na malha metropolitana de Curitiba (dados consolidados)</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xxs rounded-lg">
+<span class="font-label-sm text-label-sm text-primary font-bold">2.074 Total</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100% da malha</span>
+</div>
+</div>
+<!-- Horizontal Bar Visualization -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Curitiba -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-space-xs">
+<span>Curitiba</span>
+<span class="px-space-xs py-space-xxs rounded bg-primary-fixed text-primary font-label-sm text-label-sm">Hub Central</span>
+</span>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm tabular-nums">
+<span class="font-title-md text-title-md text-primary">742 clientes</span>
+<span class="text-on-surface-variant w-10 text-right">37%</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500" style="width: 37%"></div>
+</div>
+</div>
+<!-- Araucária -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Araucária</span>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm tabular-nums">
+<span class="font-title-md text-title-md text-primary">385 clientes</span>
+<span class="text-on-surface-variant w-10 text-right">19%</span>
+</div>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500" style="width: 19%"></div>
+</div>
+</div>
+<!-- São José dos Pinhais -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">São José dos Pinhais</span>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm tabular-nums">
+<span class="font-title-md text-title-md text-primary">290 clientes</span>
+<span class="text-on-surface-variant w-10 text-right">14%</span>
+</div>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500" style="width: 14%"></div>
+</div>
+</div>
+<!-- Colombo -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Colombo</span>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm tabular-nums">
+<span class="font-title-md text-title-md text-primary">180 clientes</span>
+<span class="text-on-surface-variant w-10 text-right">9%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 9%"></div>
+</div>
+</div>
+<!-- Pinhais -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Pinhais</span>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm tabular-nums">
+<span class="font-title-md text-title-md text-primary">135 clientes</span>
+<span class="text-on-surface-variant w-10 text-right">7%</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 7%"></div>
+</div>
+</div>
+<!-- Grid compacto das demais cidades -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs mt-space-xs">
+<!-- Campo Largo -->
+<div class="flex flex-col gap-space-xxs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Campo Largo</span>
+<span class="font-label-lg text-label-lg text-primary tabular-nums">98 (5%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 14%"></div>
+</div>
+</div>
+<!-- Fazenda Rio Grande -->
+<div class="flex flex-col gap-space-xxs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Fazenda Rio Grande</span>
+<span class="font-label-lg text-label-lg text-primary tabular-nums">64 (3%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 9%"></div>
+</div>
+</div>
+<!-- Almirante Tamandaré -->
+<div class="flex flex-col gap-space-xxs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Almirante Tamandaré</span>
+<span class="font-label-lg text-label-lg text-primary tabular-nums">45 (2%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 6%"></div>
+</div>
+</div>
+<!-- Piraquara & Quatro Barras -->
+<div class="flex flex-col gap-space-xxs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface">Piraquara / Quatro Barras</span>
+<span class="font-label-lg text-label-lg text-primary tabular-nums">76 (4%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 11%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabela de Rotas em Andamento -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">alt_route</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Rotas em Andamento com Maior Volume</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Progresso de entrega em tempo real sincronizado via telemetria embarcada</p>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary font-semibold">
+            5 rotas prioritárias
+          </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-md text-label-md uppercase tracking-wider">
+<th class="py-space-sm px-space-lg">Veículo / Placa</th>
+<th class="py-space-sm px-space-md">Motorista &amp; Auxiliar</th>
+<th class="py-space-sm px-space-md">Região de Rota</th>
+<th class="py-space-sm px-space-md">Carga</th>
+<th class="py-space-sm px-space-lg text-right">% Conclusão</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="h-8 w-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                      G01
+                    </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">BCR-8E42</span>
+<span class="font-label-sm text-label-sm text-outline">Scania P310 • Tanque 14t</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Marcos Vinícius Prado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ajudante: Roberto Alves</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Curitiba (CIC &amp; Portão)</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-xxs rounded bg-primary-fixed text-primary font-label-sm text-label-sm font-medium">Granel GLP</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-sm tabular-nums">
+<div class="w-24 h-2 rounded-full bg-surface-container-high overflow-hidden hidden sm:block">
+<div class="h-full bg-secondary rounded-full" style="width: 82%"></div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">82%</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="h-8 w-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                      G04
+                    </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">AWS-9912</span>
+<span class="font-label-sm text-label-sm text-outline">Volvo VM 270 • Tanque 10t</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Luiz Fernando Soares</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ajudante: Emerson Silva</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Araucária (Polo Industrial)</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-xxs rounded bg-primary-fixed text-primary font-label-sm text-label-sm font-medium">Granel GLP</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-sm tabular-nums">
+<div class="w-24 h-2 rounded-full bg-surface-container-high overflow-hidden hidden sm:block">
+<div class="h-full bg-secondary rounded-full" style="width: 71%"></div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">71%</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="h-8 w-8 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                      C02
+                    </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">RTY-4019</span>
+<span class="font-label-sm text-label-sm text-outline">Mercedes Atego • Gaiola P45</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Rafael Mendes Cunha</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ajudante: Davi Costa</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">São José dos Pinhais</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-xxs rounded bg-secondary-fixed text-secondary font-label-sm text-label-sm font-medium">Cilindros</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-sm tabular-nums">
+<div class="w-24 h-2 rounded-full bg-surface-container-high overflow-hidden hidden sm:block">
+<div class="h-full bg-secondary rounded-full" style="width: 64%"></div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">64%</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="h-8 w-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                      G07
+                    </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">KLO-3120</span>
+<span class="font-label-sm text-label-sm text-outline">Scania P280 • Tanque 12t</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Geraldo Magela Bastos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ajudante: Lucas Ramos</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Colombo &amp; Pinhais</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-xxs rounded bg-primary-fixed text-primary font-label-sm text-label-sm font-medium">Granel GLP</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-sm tabular-nums">
+<div class="w-24 h-2 rounded-full bg-surface-container-high overflow-hidden hidden sm:block">
+<div class="h-full bg-secondary rounded-full" style="width: 58%"></div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">58%</span>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="h-8 w-8 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                      C05
+                    </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">QWE-7741</span>
+<span class="font-label-sm text-label-sm text-outline">VW Constellation • Plataforma</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">João Paulo Nogueira</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ajudante: Carlos Daniel</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface">Campo Largo &amp; RMC Oeste</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-space-xxs rounded bg-secondary-fixed text-secondary font-label-sm text-label-sm font-medium">Cilindros</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-sm tabular-nums">
+<div class="w-24 h-2 rounded-full bg-surface-container-high overflow-hidden hidden sm:block">
+<div class="h-full bg-secondary rounded-full" style="width: 44%"></div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">44%</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Coluna Secundária (35% -> 4 colunas no lg) -->
+<div class="lg:col-span-4 flex flex-col gap-space-xl min-w-0">
+<!-- Card Status da Frota do Dia -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">commute</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Status da Frota do Dia</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-space-xxs rounded-full bg-surface-container text-primary font-bold">25 Veículos</span>
+</div>
+<!-- Donut / Telemetry Breakdown Visual -->
+<div class="flex items-center gap-space-lg p-space-md rounded-xl bg-surface-container-low">
+<div class="relative flex items-center justify-center h-20 w-20 flex-shrink-0">
+<!-- Inline SVG Donut Chart -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- 18 Granel (72%) -->
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="72, 100" stroke-width="3.8"></path>
+<!-- 5 Cilindros (20%) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="20, 100" stroke-dashoffset="-72" stroke-width="3.8"></path>
+<!-- 2 Manutenção (8%) -->
+<path class="text-outline-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="8, 100" stroke-dashoffset="-92" stroke-width="3.8"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-title-md text-title-md text-primary font-bold leading-none">92%</span>
+<span class="font-label-sm text-label-sm text-outline">Operação</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs flex-1">
+<span class="font-title-md text-title-md text-on-surface">Capacidade Alocada</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">23 veículos em itinerário e 2 reservas em procedimento técnico.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Granel -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="h-2.5 w-2.5 rounded-full bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Caminhões Tanque (Granel)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Operando normalmente em rota</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">18</span>
+</div>
+<!-- Item 2: Cilindros -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="h-2.5 w-2.5 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Caminhões Plataforma (Cilindros)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Distribuição urbana e industrial</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">5</span>
+</div>
+<!-- Item 3: Manutenção -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="h-2.5 w-2.5 rounded-full bg-outline-variant"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Veículos Reserva / Pátio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Manutenção preventiva de 10.000 km</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">2</span>
+</div>
+</div>
+</div>
+<!-- Card de Alertas e Avisos Operacionais -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">campaign</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Avisos Operacionais</h2>
+</div>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Alerta 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-primary-fixed text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+</div>
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Rodízio de Sábado definido</span>
+<span class="font-label-sm text-label-sm text-outline">08:30</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Próxima escala disponível para validação da chefia de tráfego. Equipes A e C alocadas.
+              </p>
+</div>
+</div>
+<!-- Alerta 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-surface-container text-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">local_gas_station</span>
+</div>
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Reabastecimento Base Sul</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">07:15</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Descarga de 45.000L concluída com sucesso. Nível de reservatório em 98% de prontidão.
+              </p>
+</div>
+</div>
+<!-- Alerta 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">rainy</span>
+</div>
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Condições Climáticas</span>
+<span class="font-label-sm text-label-sm text-error">Tempo Real</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Previsão de chuva moderada na rota BR-277 / Curitiba-Litoral. Recomendada velocidade máxima de 60 km/h para carretas pesadas.
+              </p>
+</div>
+</div>
+</div>
+<!-- Rodapé do Card com Mini Telemetria de Pátio -->
+<div class="pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Canal de rádio: VHF 158.420 MHz</span>
+<span class="text-primary font-semibold">Central Operacional OK</span>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

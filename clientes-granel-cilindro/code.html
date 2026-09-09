@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "surface-dim": "#cbdbf5", "tertiary-container": "#434b60", "on-secondary-container": "#fefcff", "tertiary-fixed": "#dae2fd", "primary-container": "#1e40af", "on-error-container": "#93000a", "primary-fixed": "#dde1ff", "surface-container": "#e5eeff", "primary": "#00288e", "primary-fixed-dim": "#b8c4ff", "on-tertiary-fixed": "#131b2e", "inverse-primary": "#b8c4ff", "outline-variant": "#c4c5d5", "on-background": "#0b1c30", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "surface-container-low": "#eff4ff", "surface-tint": "#3755c3", "tertiary": "#2d3449", "surface-container-high": "#dce9ff", "outline": "#757684", "surface-container-highest": "#d3e4fe", "secondary-fixed-dim": "#b4c5ff", "secondary": "#0051d5", "surface": "#f8f9ff", "on-tertiary-fixed-variant": "#3f465c", "on-tertiary-container": "#b4bbd5", "on-error": "#ffffff", "background": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "secondary-container": "#316bf3", "inverse-surface": "#213145", "on-secondary-fixed": "#00174b", "tertiary-fixed-dim": "#bec6e0", "surface-bright": "#f8f9ff", "on-primary-container": "#a8b8ff", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#173bab", "on-primary-fixed": "#001453", "error": "#ba1a1a", "on-surface-variant": "#444653", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#003ea8", "on-surface": "#0b1c30", "secondary-fixed": "#dbe1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "space-2xl": "2rem", "space-lg": "1rem", "space-xxs": "0.125rem", "space-md": "0.75rem", "space-sm": "0.5rem", "dock-height": "4rem", "sidebar-width": "16rem", "space-xs": "0.25rem", "sidebar-collapsed": "4.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg-mobile": [ "Inter" ], "headline-md": [ "Inter" ], "body-sm": [ "Inter" ], "title-md": [ "Inter" ], "label-lg": [ "Inter" ], "label-md": [ "Inter" ], "title-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg": [ "Inter" ] }, "fontSize": { "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "title-md": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "label-lg": [ "13px", { "lineHeight": "18px", "fontWeight": "600" } ], "label-md": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "title-lg": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "headline-lg": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Logística360 Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WMwnZQECNm94Ba_OLCBzWtVH5bFIKYFd5hNeEvPFNUF7AQQ_vWQqOaGbFl4pma6KN9XRJyr3iTsPiH8u1q6a285sDjbEY4aTks5C1ag_vOizSFENj6J24STPWwbHIl3v5JjbPh_CojjL9IoVi2t3R9ETjWek7KJi4bCk2Z00WRubgKqraWDMqzbtWFHCl4A-ns8lK12goU7vqqeJvX3YAkv3ctFZGG3W6iBxE9oPnp3niBHrgfJy4K4jw"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary leading-tight tracking-tight">Logística360</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Granel &amp; Cilindros</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-md text-label-md text-outline uppercase tracking-wider">Operação Diária</div></div><nav class="px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="painel" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Painel</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-title-md rounded-lg shadow-sm" data-path="clientes" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span>Clientes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="escalas" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Escalas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="equipe" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Equipe</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-title-md text-title-md hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ocorrencias" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">report_problem</span><span>Ocorrências</span></div><span class="px-space-xs py-space-xxs rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">3</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]"><div class="flex items-center justify-between"><span class="font-label-lg text-label-lg text-on-surface">Central de Apoio</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Suporte técnico de despacho e monitoramento via rádio/telemetria.</p><div class="flex items-center justify-between pt-space-xs"><span class="font-label-sm text-label-sm text-outline">v3.1 Ativa</span><span class="font-label-sm text-label-sm text-secondary font-semibold">Online</span></div></div><div class="px-space-sm py-space-xxs flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm text-outline">Status do Sistema</span><div class="flex items-center gap-space-xs"><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Sincronizado</span></div></div></div></aside><div class="pl-sidebar-width"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 px-space-xl flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg flex-1"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all" placeholder="Buscar cliente, motorista, placa, rota..." type="text"/></div><div class="hidden xl:flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-outline">event</span><span>Hoje: Terça-feira, 24 de Outubro</span></div><span class="text-outline-variant">•</span><div class="flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-secondary"></span><span class="font-label-lg text-label-lg text-primary">23 equipes ativas</span></div></div></div><div class="flex items-center gap-space-lg"><button class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-md"><div class="text-right hidden sm:flex sm:flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">Carlos Eduardo Mendes</span><span class="font-label-sm text-label-sm text-on-surface-variant">Supervisor de Operações</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2nHvnEffuy-6IRPCFoxlLcbb-jvVbdYPBOVEdEnAMZ0EzqBiP2xNUm3QNLok4kB3NK0AD40-fZbBN8rMecp-Xgt2RGfHzmfQcrJpd7NcHz13EIiXEbAnFHfagq1FObJKQkrA_GBPhTqc2sdvn26KhngvLewVZBrjqLymUjDNlF-ZDFMn7FEZb-NfH5z7W95v0_C1mdvNCd8SzENq7NhHwo5l8c-Zq7tzHfjm1E34L8jtoiAiOXqIGTg"/></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-xl py-space-xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP HEADER / CONTROL BAR -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Title & Metric Badge -->
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Gestão de Clientes</h1>
+<span class="px-space-sm py-space-xxs rounded-full bg-surface-container-high text-primary font-label-md text-label-md">
+              2.074 clientes cadastrados
+            </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Saneamento Concluído (0 Duplicidades)
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Base operacional unificada de Granel Criogênico e Cilindros Industriais</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg flex items-center gap-space-xs transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exportar Lista</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg flex items-center gap-space-xs transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_business</span>
+<span>+ Cadastrar Novo Cliente</span>
+</button>
+</div>
+</div>
+<!-- Search Input Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-24 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-all" id="clienteSearchInput" placeholder="Buscar por nome do cliente, código (#GR- / #CL-), cidade saneada, bairro ou CNPJ..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 font-label-sm text-label-sm text-outline bg-surface-container px-2 py-0.5 rounded">
+<span>Ctrl</span><span>+</span><span>K</span>
+</div>
+</div>
+<!-- Quick Filters & Segmentations -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Type Pill Selector -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-md py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold" type="button">
+            Todos (2.074)
+          </button>
+<button class="px-space-md py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+            Granel (2.015)
+          </button>
+<button class="px-space-md py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+            Cilindro (59)
+          </button>
+</div>
+<!-- City Dropdown (Saneadas) -->
+<div class="relative">
+<select class="h-9 pl-space-md pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer appearance-none">
+<option>Todas as cidades (PR/SC)</option>
+<option>Araucária (CIC Sul / Centro)</option>
+<option>Curitiba (Batel / CIC / Boqueirão)</option>
+<option>São José dos Pinhais (Aeroporto / Afonso Pena)</option>
+<option>Colombo (Maracanã / Roça Grande)</option>
+<option>Pinhais (Atuba / Alphaville)</option>
+<option>Campo Largo</option>
+<option>Joinville (Distrito Industrial)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Canal de Venda Dropdown -->
+<div class="relative">
+<select class="h-9 pl-space-md pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer appearance-none">
+<option>Todos os canais de venda</option>
+<option>Industrial (Grandes Contas)</option>
+<option>Comercial &amp; Varejo</option>
+<option>Condomínio Residencial</option>
+<option>Revenda Autorizada</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-emerald-800 font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+            Ativos (2.041)
+          </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:text-on-surface" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+            Inativos (33)
+          </button>
+</div>
+</div>
+<!-- Quick Summary Stats -->
+<div class="flex items-center gap-space-md text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+          Senhas Criptografadas: 100%
+        </span>
+<span class="text-outline-variant">•</span>
+<span>Exibindo 1–15 de 2.074</span>
+</div>
+</div>
+</section>
+<!-- SPLIT SCREEN WORKBENCH: CLIENT LIST (55%) + SECURE CLIENT DOSSIER (45%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANEL: CLIENT LIST (~55%) -->
+<div class="lg:col-span-6 xl:col-span-7 flex flex-col gap-space-md">
+<!-- List Header & Sorter -->
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span>Carteira de Atendimento Ativa</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded-full bg-primary/10 text-primary">Granel: 97.1% | Cil: 2.9%</span>
+</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Ordenar por:</span>
+<button class="font-bold text-primary flex items-center gap-0.5 hover:underline" type="button">
+            Último Despacho <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- CLIENT CARDS CONTAINER -->
+<div class="flex flex-col gap-space-sm" id="clientCardStream">
+<!-- CARD 1: SELECTED ACTIVE (Indústrias Químicas Paranaenses Ltda) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md cursor-pointer transition-all relative overflow-hidden bg-gradient-to-r from-surface-container-low/80 to-surface-container-lowest" style="box-shadow: inset 4px 0 0 #00288e;">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">propane_tank</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">mode_fan</span> GRANEL
+                  </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">#GR-1042</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ativo
+                  </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface mt-1 truncate">Indústrias Químicas Paranaenses Ltda</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+                  Araucária - CIC Sul • Rodovia do Xisto, km 18
+                </p>
+</div>
+</div>
+<!-- Capacity Pill & Status Indicator -->
+<div class="flex flex-col items-end shrink-0">
+<span class="font-title-md text-title-md text-primary font-bold">10.000 m³</span>
+<span class="font-label-sm text-label-sm text-outline">Capacidade Armazenada</span>
+<span class="mt-2 text-label-sm font-label-sm text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded">Tanque em 42% (SLA Ok)</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/50 px-space-sm py-1.5 rounded-lg">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">repeat</span>
+              Frequência: Terças e Sextas
+            </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+              Última Entrega: 22/10 (4.200 m³)
+            </span>
+<span class="font-semibold text-secondary">Ficha Selecionada →</span>
+</div>
+</div>
+<!-- CARD 2: Condomínio Residencial Bella Vista (Granel) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">mode_fan</span> GRANEL
+                  </span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">#GR-0891</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ativo
+                  </span>
+<span class="font-label-sm text-label-sm text-outline-variant px-1.5 py-0.5 rounded bg-surface-container">Condomínio</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface mt-1 truncate">Condomínio Residencial Bella Vista</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+                  Curitiba - Batel • Av. Visconde de Guarapuava, 4520
+                </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">2.500 m³</span>
+<span class="font-label-sm text-label-sm text-outline">Consumo Médio</span>
+<span class="mt-2 text-label-sm font-label-sm text-amber-900 bg-amber-100 px-2 py-0.5 rounded">Aguardando Pedido</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/30 px-space-sm py-1.5 rounded-lg">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Portaria Remota (Acesso Restrito)
+            </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+              Próximo Roteamento Sugerido: 26/10
+            </span>
+<button class="text-secondary font-semibold hover:underline">Ver Detalhes</button>
+</div>
+</div>
+<!-- CARD 3: Metalúrgica Araucária (Cilindros) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-cyan-100 text-cyan-900 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-cyan-700 text-white font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">view_column</span> CILINDRO
+                  </span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">#CL-0028</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ativo
+                  </span>
+<span class="font-label-sm text-label-sm text-outline-variant px-1.5 py-0.5 rounded bg-surface-container">Industrial</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface mt-1 truncate">Metalúrgica Araucária S/A</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+                  Araucária - Centro Industrial • Rua das Indústrias, 108
+                </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">48 Cils/Mês</span>
+<span class="font-label-sm text-label-sm text-outline">Argônio + Mistura</span>
+<span class="mt-2 text-label-sm font-label-sm text-blue-900 bg-blue-100 px-2 py-0.5 rounded">Troca Agendada Hoje</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/30 px-space-sm py-1.5 rounded-lg">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+              Giro Médio: 12 cils / semana
+            </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+              Caminhão Rota 04 (Em trânsito)
+            </span>
+<button class="text-secondary font-semibold hover:underline">Ver Detalhes</button>
+</div>
+</div>
+<!-- CARD 4: Hospital Santa Helena (Granel Oxigênio) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">local_hospital</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">mode_fan</span> GRANEL
+                  </span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">#GR-0319</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Prioridade Máxima
+                  </span>
+<span class="font-label-sm text-label-sm text-red-700 bg-red-50 px-1.5 py-0.5 rounded">SLA Vital</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface mt-1 truncate">Hospital &amp; Maternidade Santa Helena</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+                  Curitiba - Bigorrilho • Alameda Princesa Izabel, 1920
+                </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">15.000 m³</span>
+<span class="font-label-sm text-label-sm text-outline">Tanque Criogênico O2</span>
+<span class="mt-2 text-label-sm font-label-sm text-emerald-900 bg-emerald-100 px-2 py-0.5 rounded">Nível em 78%</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/30 px-space-sm py-1.5 rounded-lg">
+<span class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+              Telemetria Conectada (24/7)
+            </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+              Resp: Dra. Camila Rocha
+            </span>
+<button class="text-secondary font-semibold hover:underline">Ver Detalhes</button>
+</div>
+</div>
+<!-- CARD 5: Usinagem e Autopeças Pinheirinho (Cilindros) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-cyan-100 text-cyan-900 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-cyan-700 text-white font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">view_column</span> CILINDRO
+                  </span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">#CL-0044</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ativo
+                  </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface mt-1 truncate">Usinagem e Peças Pinheirinho Ltda</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+                  São José dos Pinhais - Afonso Pena • Rua Marechal Deodoro, 330
+                </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">30 Cils/Mês</span>
+<span class="font-label-sm text-label-sm text-outline">Acetileno + O2</span>
+<span class="mt-2 text-label-sm font-label-sm text-slate-700 bg-slate-100 px-2 py-0.5 rounded">Troca Quinzenal</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low/30 px-space-sm py-1.5 rounded-lg">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Acesso Biometria Portão 2
+            </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">event_repeat</span>
+              Último Recebimento: 18/10
+            </span>
+<button class="text-secondary font-semibold hover:underline">Ver Detalhes</button>
+</div>
+</div>
+</div>
+<!-- Compact Pagination & Sanity Metadata -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Página <strong>1</strong> de <strong>139</strong></span>
+<span class="text-outline-variant">|</span>
+<span class="text-secondary font-semibold">Base sincronizada com Waze / ERP SAP</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-outline cursor-not-allowed">Anterior</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container">139</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container">Próxima</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: COMPLETE & SECURE CLIENT DOSSIER (~45%) -->
+<div class="lg:col-span-6 xl:col-span-5 flex flex-col gap-space-md sticky top-20">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- DOSSIER HEADER -->
+<div class="flex flex-col gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-xl">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">mode_fan</span> GRANEL
+                </span>
+<span class="font-label-md text-label-md text-primary font-bold">#GR-1042</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Cliente Ativo
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold leading-snug">
+                Indústrias Químicas Paranaenses Ltda
+              </h3>
+<p class="font-label-md text-label-md text-on-surface-variant">CNPJ: 76.128.940/0001-52 • Inscrição Estadual: 104.982.33-1</p>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">edit</span>
+<span>Editar Cadastro</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary hover:bg-primary-container font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Nova Entrega</span>
+</button>
+</div>
+</div>
+<!-- SEÇÃO 1: LOCALIZAÇÃO E LOGÍSTICA -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<h4>1. Localização e Logística de Acesso</h4>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Endereço Completo de Descarga</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Rodovia do Xisto, km 18, nº 4200 - Cidade Industrial, Araucária/PR - CEP 83707-000
+              </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex flex-col bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Ponto de Referência</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Próximo à entrada do terminal de cargas B</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Coordenadas Geográficas</span>
+<span class="font-body-sm text-body-sm text-on-surface font-mono">-25.58914, -49.38721</span>
+</div>
+</div>
+<!-- Restrição de Horário -->
+<div class="p-2.5 rounded-lg bg-amber-50 text-amber-950 flex items-start gap-2 shadow-sm">
+<span class="material-symbols-outlined text-amber-600 text-[20px] shrink-0 mt-0.5">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-amber-900">Restrição Operacional de Horário</span>
+<p class="font-body-sm text-body-sm text-amber-800">
+                  Acesso permitido apenas entre <strong>08:00 e 17:00</strong> para carretas bitrem. Proibida permanência noturna no pátio interno.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SEÇÃO 2: ESTRUTURA TÉCNICA DE ARMAZENAMENTO -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+<h4>2. Estrutura Técnica de Armazenamento</h4>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Tanque(s) Instalados</span>
+<span class="font-title-md text-title-md text-on-surface mt-1">2x Verticais 5.000m³</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Total: 10.000 m³</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Frequência Programada</span>
+<span class="font-title-md text-title-md text-on-surface mt-1">Semanal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Terças e Sextas</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Canal de Venda</span>
+<span class="font-title-md text-title-md text-on-surface mt-1">Industrial</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Grandes Contas PR</span>
+</div>
+</div>
+</div>
+<!-- SEÇÃO 3: CONTATO DO LOCAL -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">contact_phone</span>
+<h4>3. Contato e Responsável Local</h4>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between flex-wrap gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold">
+                MV
+              </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Marcos Vinícius</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gerente de Manutenção e Utilidades</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap font-label-md text-label-md">
+<a class="h-8 px-space-md rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-high flex items-center gap-1 shadow-sm" href="tel:41988442190">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                (41) 98844-2190
+              </a>
+<a class="h-8 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high flex items-center gap-1 shadow-sm" href="mailto:marcos.v@indquimica.com.br">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+                marcos.v@indquimica.com.br
+              </a>
+</div>
+</div>
+</div>
+<!-- SEÇÃO 4: SEGURANÇA E ACESSO AO LOCAL (ANTI-EXPOSIÇÃO DE SENHAS) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px] text-secondary">security</span>
+<h4>4. Segurança e Acesso ao Local</h4>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+              Proteção Criptográfica Ativa
+            </span>
+</div>
+<!-- Card Seguro com Máscara e Auditoria -->
+<div class="rounded-xl p-space-md bg-gradient-to-br from-surface-container-low to-surface-container border-0 shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">key</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Chave / Senha de Acesso ao Portão e Condomínio</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">Nível 2 - Restrito à Frota</span>
+</div>
+<!-- Interactive Masked Field -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-outline text-[20px]">lock</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Código do Portão / Eclusa</span>
+<span class="font-mono text-title-lg tracking-widest text-on-surface font-bold select-none" id="secretPasswordValue">
+                    ••••••••••••
+                  </span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-space-md rounded-full bg-surface-container-low text-primary hover:bg-surface-container font-label-md text-label-md font-semibold flex items-center gap-1.5 transition-all" id="togglePasswordBtn" onclick="toggleSecretPassword()" type="button">
+<span class="material-symbols-outlined text-[16px]" id="passwordEyeIcon">visibility</span>
+<span id="passwordBtnText">Mostrar Senha</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary flex items-center justify-center transition-all" onclick="copySecretCode()" title="Copiar Código Seguro" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Audit Notice -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline pt-space-xxs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">policy</span>
+<span>Dado sensível registrado em log de visualização (Supervisor: Carlos Mendes).</span>
+</div>
+<span class="text-secondary font-mono" id="auditTimestamp"></span>
+</div>
+<!-- Observações de Portaria -->
+<div class="pt-space-xs bg-surface-container-lowest/60 p-space-sm rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Instruções de Portaria &amp; Chegada:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Interfonar ramal 204 e apresentar crachá de motorista autorizado. Proibido acionar buzina no perímetro residencial anexo.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SEÇÃO 5: HISTÓRICO RECENTE DE ENTREGAS (ÚLTIMAS 3 ENTREGAS) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<h4>5. Histórico Recente de Entregas</h4>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-semibold hover:underline" href="#">Ver todas (48)</a>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="grid grid-cols-12 bg-surface-container px-space-md py-2 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<div class="col-span-3">Data / Hora</div>
+<div class="col-span-3">Volume</div>
+<div class="col-span-3">Veículo / Placa</div>
+<div class="col-span-3 text-right">Comprovante</div>
+</div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 px-space-md py-2.5 items-center bg-surface-container-lowest font-body-sm text-body-sm">
+<div class="col-span-3 flex flex-col">
+<span class="font-semibold text-on-surface">22/10/2023</span>
+<span class="font-label-sm text-label-sm text-outline">10:45 BRT</span>
+</div>
+<div class="col-span-3 font-semibold text-primary">
+                4.200 m³
+              </div>
+<div class="col-span-3 flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">local_shipping</span>
+<span>BAW-9281 (Bitrem)</span>
+</div>
+<div class="col-span-3 text-right">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-semibold">Assinado</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 px-space-md py-2.5 items-center bg-surface-container-low/40 font-body-sm text-body-sm">
+<div class="col-span-3 flex flex-col">
+<span class="font-semibold text-on-surface">17/10/2023</span>
+<span class="font-label-sm text-label-sm text-outline">14:12 BRT</span>
+</div>
+<div class="col-span-3 font-semibold text-primary">
+                3.850 m³
+              </div>
+<div class="col-span-3 flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">local_shipping</span>
+<span>BCK-4019 (Carreta)</span>
+</div>
+<div class="col-span-3 text-right">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-semibold">Assinado</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 px-space-md py-2.5 items-center bg-surface-container-lowest font-body-sm text-body-sm">
+<div class="col-span-3 flex flex-col">
+<span class="font-semibold text-on-surface">12/10/2023</span>
+<span class="font-label-sm text-label-sm text-outline">09:18 BRT</span>
+</div>
+<div class="col-span-3 font-semibold text-primary">
+                4.100 m³
+              </div>
+<div class="col-span-3 flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">local_shipping</span>
+<span>BAW-9281 (Bitrem)</span>
+</div>
+<div class="col-span-3 text-right">
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-semibold">Assinado</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interações JS: Máscara Segura de Senha e Feedback Operacional -->
+<script>
+  let isPasswordRevealed = false;
+  const realPasswordValue = "ARQ-9844#PORTAO2";
+
+  function toggleSecretPassword() {
+    const passwordEl = document.getElementById("secretPasswordValue");
+    const iconEl = document.getElementById("passwordEyeIcon");
+    const textEl = document.getElementById("passwordBtnText");
+    const timestampEl = document.getElementById("auditTimestamp");
+
+    isPasswordRevealed = !isPasswordRevealed;
+
+    if (isPasswordRevealed) {
+      passwordEl.innerText = realPasswordValue;
+      passwordEl.classList.remove("text-on-surface");
+      passwordEl.classList.add("text-primary");
+      iconEl.innerText = "visibility_off";
+      textEl.innerText = "Ocultar";
+      
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      if (timestampEl) {
+        timestampEl.innerText = "Acessado às " + timeStr;
+      }
+    } else {
+      passwordEl.innerText = "••••••••••••";
+      passwordEl.classList.remove("text-primary");
+      passwordEl.classList.add("text-on-surface");
+      iconEl.innerText = "visibility";
+      textEl.innerText = "Mostrar Senha";
+    }
+  }
+
+  function copySecretCode() {
+    navigator.clipboard.writeText(realPasswordValue).then(() => {
+      const btn = event.currentTarget;
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-emerald-600">done</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+      }, 1800);
+    });
+  }
+
+  // Filtragem rápida pelo campo de busca
+  document.getElementById("clienteSearchInput").addEventListener("input", function(e) {
+    const query = e.target.value.toLowerCase().trim();
+    const cards = document.querySelectorAll("#clientCardStream > div");
+    
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (!query || text.includes(query)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script></main></div></body></html>
