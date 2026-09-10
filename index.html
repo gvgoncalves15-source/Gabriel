@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logística360 — Painel Operacional</title>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#00288e",
+          "primary-container": "#1e40af",
+          secondary: "#0051d5",
+          surface: "#f8f9ff",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#eff4ff",
+          "surface-container": "#e5eeff",
+          "surface-container-high": "#dce9ff",
+          "on-surface": "#0b1c30",
+          "on-surface-variant": "#444653",
+          outline: "#757684",
+          "outline-variant": "#c4c5d5",
+          error: "#ba1a1a",
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body { margin:0; font-family: 'Inter', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- ===================== TELA DE LOGIN ===================== -->
+<div id="login-screen" class="min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl shadow-lg p-8">
+    <div class="flex flex-col items-center mb-6">
+      <div class="h-12 w-12 rounded-xl bg-primary-container flex items-center justify-center mb-3">
+        <span class="material-symbols-outlined text-white text-[28px]">local_shipping</span>
+      </div>
+      <h1 class="text-xl font-bold text-primary">Logística360</h1>
+      <p class="text-sm text-on-surface-variant">Granel &amp; Cilindros</p>
+    </div>
+
+    <!-- Login -->
+    <div id="login-box">
+      <form id="form-login" class="flex flex-col gap-3">
+        <input id="login-email" type="email" required placeholder="E-mail" class="w-full border border-outline-variant rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" />
+        <input id="login-senha" type="password" required placeholder="Senha" class="w-full border border-outline-variant rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" />
+        <p id="login-erro" class="hidden text-error text-sm"></p>
+        <button type="submit" class="bg-primary-container text-white rounded-lg py-2 font-semibold text-sm hover:bg-secondary transition">Entrar</button>
+      </form>
+      <p class="text-center text-sm text-on-surface-variant mt-4">
+        Não tem conta? <button class="toggle-auth text-secondary font-semibold">Criar conta</button>
+      </p>
+    </div>
+
+    <!-- Cadastro -->
+    <div id="cadastro-box" class="hidden">
+      <form id="form-cadastro" class="flex flex-col gap-3">
+        <input id="cadastro-nome" type="text" required placeholder="Nome completo" class="w-full border border-outline-variant rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" />
+        <input id="cadastro-email" type="email" required placeholder="E-mail" class="w-full border border-outline-variant rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" />
+        <input id="cadastro-senha" type="password" required minlength="6" placeholder="Senha (mín. 6 caracteres)" class="w-full border border-outline-variant rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" />
+        <p id="cadastro-erro" class="hidden text-sm"></p>
+        <button type="submit" class="bg-primary-container text-white rounded-lg py-2 font-semibold text-sm hover:bg-secondary transition">Criar conta</button>
+      </form>
+      <p class="text-center text-sm text-on-surface-variant mt-4">
+        Já tem conta? <button class="toggle-auth text-secondary font-semibold">Entrar</button>
+      </p>
+    </div>
+    <p class="text-center text-xs text-outline mt-6">Novas contas entram como "Operador". Peça a um administrador para elevar seu acesso se precisar ver documentos restritos (LGPD).</p>
+  </div>
+</div>
+
+<!-- ===================== APP ===================== -->
+<div id="app-shell" class="hidden">
+  <aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-md">
+    <div class="flex flex-col">
+      <div class="h-16 px-4 flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-primary-container flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-[18px]">local_shipping</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-semibold text-sm text-primary leading-tight">Logística360</span>
+          <span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Granel &amp; Cilindros</span>
+        </div>
+      </div>
+      <nav class="px-3 mt-2 flex flex-col gap-1 text-sm">
+        <a href="#" data-nav="painel" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary-container text-white font-medium"><span class="material-symbols-outlined text-[20px]">dashboard</span>Painel</a>
+        <a href="#" data-nav="clientes" class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high"><span class="material-symbols-outlined text-[20px]">domain</span>Clientes</a>
+        <a href="#" data-nav="escalas" class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high"><span class="material-symbols-outlined text-[20px]">calendar_month</span>Escalas</a>
+        <a href="#" data-nav="equipe" class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high"><span class="material-symbols-outlined text-[20px]">badge</span>Equipe</a>
+        <a href="#" data-nav="ocorrencias" class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high"><span class="material-symbols-outlined text-[20px]">report_problem</span>Ocorrências</a>
+      </nav>
+    </div>
+    <div class="p-4 border-t border-outline-variant/30">
+      <div class="flex items-center gap-2 mb-3">
+        <div class="h-8 w-8 rounded-full bg-primary-container text-white flex items-center justify-center font-semibold text-sm" id="user-avatar">U</div>
+        <div class="flex flex-col leading-tight">
+          <span id="user-name" class="text-sm font-medium"></span>
+          <span id="user-role" class="text-xs text-on-surface-variant"></span>
+        </div>
+      </div>
+      <button id="btn-logout" class="w-full text-sm text-error border border-error/30 rounded-lg py-1.5 hover:bg-error/5">Sair</button>
+    </div>
+  </aside>
+
+  <main class="pl-64 min-h-screen">
+    <div class="max-w-6xl mx-auto p-8">
+
+      <!-- PAINEL -->
+      <section data-page="painel">
+        <h1 class="text-2xl font-bold text-primary mb-1">Visão Geral Operacional</h1>
+        <p class="text-on-surface-variant mb-6">Monitoramento em tempo real de clientes, escalas e ocorrências.</p>
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+            <span class="text-xs uppercase text-outline">Clientes</span>
+            <p id="kpi-total-clientes" class="text-2xl font-bold text-primary mt-1">0</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+            <span class="text-xs uppercase text-outline">Granel</span>
+            <p id="kpi-granel" class="text-2xl font-bold text-primary mt-1">0</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+            <span class="text-xs uppercase text-outline">Cilindro</span>
+            <p id="kpi-cilindro" class="text-2xl font-bold text-primary mt-1">0</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+            <span class="text-xs uppercase text-outline">Escalas hoje</span>
+            <p id="kpi-escalas-hoje" class="text-2xl font-bold text-primary mt-1">0</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+            <span class="text-xs uppercase text-outline">Ocorrências abertas</span>
+            <p id="kpi-ocorrencias" class="text-2xl font-bold text-error mt-1">0</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm">
+          <h2 class="font-semibold mb-2">Últimas ocorrências</h2>
+          <ul id="painel-ultimas-ocorrencias" class="text-sm"></ul>
+        </div>
+      </section>
+
+      <!-- CLIENTES -->
+      <section data-page="clientes" class="hidden">
+        <h1 class="text-2xl font-bold text-primary mb-4">Gestão de Clientes</h1>
+        <form id="form-cliente" class="bg-surface-container-lowest rounded-xl p-5 shadow-sm grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          <input id="cliente-codigo" placeholder="Código (ex: GR-1042)" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <select id="cliente-tipo" class="border border-outline-variant rounded-lg px-3 py-2 text-sm">
+            <option value="granel">Granel</option>
+            <option value="cilindro">Cilindro</option>
+          </select>
+          <select id="cliente-status" class="border border-outline-variant rounded-lg px-3 py-2 text-sm">
+            <option value="ativo">Ativo</option>
+            <option value="prioridade">Prioridade</option>
+            <option value="inativo">Inativo</option>
+          </select>
+          <input id="cliente-nome" required placeholder="Nome do cliente" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2" />
+          <input id="cliente-cidade" placeholder="Cidade" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <input id="cliente-endereco" placeholder="Endereço" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2" />
+          <input id="cliente-capacidade" placeholder="Capacidade (ex: 10.000 m³)" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <button type="submit" class="bg-primary-container text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-secondary col-span-2 md:col-span-1">+ Cadastrar Cliente</button>
+        </form>
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead><tr class="text-left text-xs uppercase text-outline border-b border-outline-variant/30">
+              <th class="py-2 px-3">Código</th><th class="py-2 px-3">Nome</th><th class="py-2 px-3">Tipo</th><th class="py-2 px-3">Cidade</th><th class="py-2 px-3">Status</th><th></th>
+            </tr></thead>
+            <tbody id="tabela-clientes"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ESCALAS -->
+      <section data-page="escalas" class="hidden">
+        <h1 class="text-2xl font-bold text-primary mb-4">Escala Diária — Equipes e Veículos</h1>
+        <form id="form-escala" class="bg-surface-container-lowest rounded-xl p-5 shadow-sm grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          <input id="escala-data" type="date" required class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <select id="escala-turno" class="border border-outline-variant rounded-lg px-3 py-2 text-sm">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+          <input id="escala-equipe" required placeholder="Equipe" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <input id="escala-motorista" placeholder="Motorista" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <input id="escala-placa" placeholder="Placa do veículo" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <input id="escala-rota" placeholder="Rota" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <button type="submit" class="bg-primary-container text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-secondary col-span-2 md:col-span-1">+ Adicionar à Escala</button>
+        </form>
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead><tr class="text-left text-xs uppercase text-outline border-b border-outline-variant/30">
+              <th class="py-2 px-3">Data</th><th class="py-2 px-3">Equipe</th><th class="py-2 px-3">Motorista</th><th class="py-2 px-3">Placa</th><th class="py-2 px-3">Turno</th><th class="py-2 px-3">Status</th><th></th>
+            </tr></thead>
+            <tbody id="tabela-escalas"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- EQUIPE -->
+      <section data-page="equipe" class="hidden">
+        <h1 class="text-2xl font-bold text-primary mb-4">Equipe</h1>
+        <form id="form-funcionario" class="bg-surface-container-lowest rounded-xl p-5 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+          <input id="func-nome" required placeholder="Nome" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2" />
+          <input id="func-cargo" placeholder="Cargo" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <input id="func-telefone" placeholder="Telefone" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+          <button type="submit" class="bg-primary-container text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-secondary col-span-2 md:col-span-4">+ Cadastrar Funcionário</button>
+        </form>
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto mb-8">
+          <table class="w-full text-sm">
+            <thead><tr class="text-left text-xs uppercase text-outline border-b border-outline-variant/30">
+              <th class="py-2 px-3">Nome</th><th class="py-2 px-3">Cargo</th><th class="py-2 px-3">Telefone</th><th class="py-2 px-3">Status</th><th></th>
+            </tr></thead>
+            <tbody id="tabela-funcionarios"></tbody>
+          </table>
+        </div>
+
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-error">lock</span>
+          <h2 class="text-lg font-bold text-primary">Documentos Restritos (LGPD)</h2>
+        </div>
+        <p id="lgpd-warning" class="hidden bg-amber-50 text-amber-800 text-sm rounded-lg p-3 mb-4">
+          Apenas administradores e supervisores podem ver e cadastrar documentos restritos. Fale com um administrador se precisar de acesso.
+        </p>
+        <div id="lgpd-form-wrap">
+          <form id="form-documento" class="bg-surface-container-lowest rounded-xl p-5 shadow-sm grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+            <select id="doc-funcionario" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2"></select>
+            <input id="doc-tipo" required placeholder="Tipo de documento (ex: CNH, Exame)" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+            <input id="doc-obs" placeholder="Observações" class="border border-outline-variant rounded-lg px-3 py-2 text-sm" />
+            <button type="submit" class="bg-primary-container text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-secondary col-span-2 md:col-span-4">+ Registrar Documento</button>
+          </form>
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead><tr class="text-left text-xs uppercase text-outline border-b border-outline-variant/30">
+                <th class="py-2 px-3">Funcionário</th><th class="py-2 px-3">Tipo</th><th class="py-2 px-3">Observações</th><th></th>
+              </tr></thead>
+              <tbody id="tabela-documentos"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- OCORRÊNCIAS -->
+      <section data-page="ocorrencias" class="hidden">
+        <h1 class="text-2xl font-bold text-primary mb-4">Central de Ocorrências Operacionais</h1>
+        <form id="form-ocorrencia" class="bg-surface-container-lowest rounded-xl p-5 shadow-sm grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+          <input id="ocorrencia-titulo" required placeholder="Título" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2" />
+          <select id="ocorrencia-severidade" class="border border-outline-variant rounded-lg px-3 py-2 text-sm">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+            <option value="critica">Crítica</option>
+          </select>
+          <select id="ocorrencia-cliente" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2"></select>
+          <textarea id="ocorrencia-descricao" placeholder="Descrição" class="border border-outline-variant rounded-lg px-3 py-2 text-sm col-span-2 md:col-span-3"></textarea>
+          <button type="submit" class="bg-primary-container text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-secondary col-span-2 md:col-span-1">+ Abrir Ocorrência</button>
+        </form>
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead><tr class="text-left text-xs uppercase text-outline border-b border-outline-variant/30">
+              <th class="py-2 px-3">Título</th><th class="py-2 px-3">Cliente</th><th class="py-2 px-3">Severidade</th><th class="py-2 px-3">Status</th><th class="py-2 px-3">Aberta em</th><th></th>
+            </tr></thead>
+            <tbody id="tabela-ocorrencias"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase-config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
